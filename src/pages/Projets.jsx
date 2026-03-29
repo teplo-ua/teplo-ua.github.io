@@ -6,9 +6,9 @@ export default function Projets() {
   const { t } = useLanguage();
 
   const cards = [
-    { to: '/projets/realises', label: t.nav.projectsSub.completed, desc: t.projetsRealises.text },
-    { to: '/projets/actuel', label: t.nav.projectsSub.current, desc: t.projetsActuel.text },
-    { to: '/projets/prevu', label: t.nav.projectsSub.planned, desc: t.projetsPrevu.text },
+    { to: '/projets/realises', label: t.nav.projectsSub.completed, desc: t.projetsRealises.projects[0]?.title || '' },
+    { to: '/projets/actuel', label: t.nav.projectsSub.current, desc: t.projetsActuel.projects[0]?.title || '' },
+    { to: '/projets/prevu', label: t.nav.projectsSub.planned, desc: t.projetsPrevu.projects[0]?.title || '' },
   ];
 
   return (

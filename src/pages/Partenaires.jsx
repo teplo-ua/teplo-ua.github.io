@@ -19,11 +19,25 @@ const FRENCH_PARTNERS = [
     url: null,
   },
   {
+    id: 'salvetat',
+    logo: null,
+    nameFr: 'Commune de la Salvetat-sur-Ago\u00FBt en coordination avec Cap Jeunes (H\u00E9rault)',
+    nameUk: 'Комуна Ла-Сальвета-сюр-Агу у координації з Cap Jeunes (Еро)',
+    url: null,
+  },
+  {
     id: 'emdr',
     logo: BASE + '946bd9_dc8f8d84e98e409d8eecad3c74e53ce9~mv2.jpg/v1/8c904dfb637d4f72.jpg',
     nameFr: 'Association EMDR France',
     nameUk: 'Асоціація EMDR France',
     url: 'https://www.emdr-france.org',
+  },
+  {
+    id: 'cpie',
+    logo: null,
+    nameFr: 'Association CPIE de Haut Languedoc, Saint Pons de Thomi\u00E8res',
+    nameUk: 'Асоціація CPIE Верхнього Лангедоку, Сен-Пон-де-Том\u2019єр',
+    url: null,
   },
   {
     id: 'aufildesarts',

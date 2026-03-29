@@ -1,10 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext.jsx';
-
-const LOGO = '/.original-site/assets/static.wixstatic.com/media/946bd9_32723dadc62642d2a26111e6d3b112c4~mv2.png/v1/e8a36fc569bc9291.png';
-const FLAG_FR = '/.original-site/assets/static.parastorage.com/services/linguist-flags/1.1005.0/79a1f6c38eef5ac8.png';
-const FLAG_UK = '/.original-site/assets/static.parastorage.com/services/linguist-flags/1.1005.0/6c68a722ed37dbb9.png';
+import { site } from '../assets/paths.js';
 
 export default function Navbar() {
   const { language, setLanguage, t } = useLanguage();
@@ -25,7 +22,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-[#FAF7E8] border-b border-neutral-200 shadow-sm">
       <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <img src={LOGO} alt="Teplo" className="h-10 w-10 object-cover rounded-full" />
+          <img src={site.logo} alt="Teplo" className="h-10 w-10 object-cover rounded-full" />
           <span className="text-xl font-light text-[#265642] hidden sm:block" style={{ letterSpacing: '0.05em' }}>
             Teplo
           </span>
@@ -103,7 +100,7 @@ export default function Navbar() {
               className="flex items-center gap-1.5 border border-neutral-300 rounded px-2 py-1 hover:bg-neutral-100 transition-colors"
               onClick={() => setLangOpen(!langOpen)}
             >
-              <img src={language === 'fr' ? FLAG_FR : FLAG_UK} alt={language} className="w-5 h-5 rounded-full object-cover" />
+              <img src={language === 'fr' ? site.flagFr : site.flagUk} alt={language} className="w-5 h-5 rounded-full object-cover" />
               <svg width="8" height="5" viewBox="0 0 10 6" fill="currentColor" className="text-neutral-500">
                 <path d="M5 6L0 0h10z" />
               </svg>
@@ -114,14 +111,14 @@ export default function Navbar() {
                   className="w-full flex items-center gap-2 px-3 py-2 hover:bg-neutral-50 text-neutral-700 text-sm"
                   onClick={() => { setLanguage('fr'); setLangOpen(false); }}
                 >
-                  <img src={FLAG_FR} alt="FR" className="w-5 h-5 rounded-full object-cover" />
+                  <img src={site.flagFr} alt="FR" className="w-5 h-5 rounded-full object-cover" />
                   Français
                 </button>
                 <button
                   className="w-full flex items-center gap-2 px-3 py-2 hover:bg-neutral-50 text-neutral-700 text-sm"
                   onClick={() => { setLanguage('uk'); setLangOpen(false); }}
                 >
-                  <img src={FLAG_UK} alt="UK" className="w-5 h-5 rounded-full object-cover" />
+                  <img src={site.flagUk} alt="UK" className="w-5 h-5 rounded-full object-cover" />
                   Українська
                 </button>
               </div>

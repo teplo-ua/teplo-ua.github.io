@@ -1,14 +1,13 @@
 import { useState } from 'react';
 import PageHeader from '../components/PageHeader.jsx';
 import { useLanguage } from '../context/LanguageContext.jsx';
-
-const BASE = '/.original-site/assets/static.wixstatic.com/media/';
+import { presse as presseAssets } from '../assets/paths.js';
 
 const ARTICLE_IMAGES = {
-  'ukraine-jeune': BASE + '946bd9_cd9f4eadfc8f4ca198d39dd82c67be3c~mv2.png/v1/a09b39c5f616c782.png',
-  'herault-tribune': BASE + '946bd9_fc17856abbd6477aa69ad0977646f24b~mv2.png/v1/ef5634057850a779.png',
-  'radio-salvetat': BASE + '946bd9_5f23b5a94359488ea649425d36db5f2a~mv2.jpg/v1/5f80a8373437bb35.jpg',
-  'midi-libre': BASE + '946bd9_381cf0567fd7418db790e267af814df7~mv2.jpg/v1/9f0d647a40ca1dfd.jpg',
+  'ukraine-jeune': presseAssets['ukraine-jeune'],
+  'herault-tribune': presseAssets['herault-tribune'],
+  'radio-salvetat': presseAssets['radio-salvetat'],
+  'midi-libre': presseAssets['midi-libre'],
 };
 
 const GOLD = '#f0c040';

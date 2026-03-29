@@ -1,12 +1,11 @@
 import PageHeader from '../components/PageHeader.jsx';
 import { useLanguage } from '../context/LanguageContext.jsx';
-
-const BASE = '/.original-site/assets/static.wixstatic.com/media/';
+import { notreEquipe } from '../assets/paths.js';
 
 const TEAM_MEMBERS = [
   {
     id: 'jean-pierre',
-    photo: BASE + '11062b_77378fc0da68439ebd8fd24a2f51e50cf000.jpg/v1/6f691beec450605d.jpg',
+    photo: notreEquipe['jean-pierre'],
     nameFr: 'Jean-Pierre FOURRA',
     nameUk: "Jean-Pierre FOURRA",
     roleFr: "Pr\u00E9sident d'honneur de l'association Teplo",
@@ -17,7 +16,7 @@ const TEAM_MEMBERS = [
   },
   {
     id: 'svetlana',
-    photo: BASE + '946bd9_62405c9641634179ababe86eee691da5~mv2.png/v1/096ec0b273bb9f8c.png',
+    photo: notreEquipe.svetlana,
     nameFr: 'Svetlana FERNANDEZ',
     nameUk: 'Свєтлана ФЕРНАНДЕС',
     roleFr: "Vice-pr\u00E9sidente de l'association",
@@ -28,7 +27,7 @@ const TEAM_MEMBERS = [
   },
   {
     id: 'ternovy',
-    photo: BASE + '946bd9_db1509a58f374d9cb0541581e8a666b8~mv2.jpg/v1/7e129885ad11e35c.jpg',
+    photo: notreEquipe.ternovy,
     nameFr: 'Ternovy',
     nameUk: 'Терновий',
     roleFr: "Fondateur de l'association",
@@ -39,7 +38,7 @@ const TEAM_MEMBERS = [
   },
   {
     id: 'alain-founder',
-    photo: BASE + '946bd9_dab53b9a9a4e43428f5c6ddcec15d7a3~mv2.png/v1/4f39b66d92c05d01.png',
+    photo: notreEquipe['alain-founder'],
     nameFr: 'Alain OTHNIN-GIRARD',
     nameUk: 'Ален ОТНІН-ЖИРАР',
     roleFr: "Fondateur de l'association",
@@ -50,7 +49,7 @@ const TEAM_MEMBERS = [
   },
   {
     id: 'oksana',
-    photo: BASE + '946bd9_02895feacf644983a54a3f0d690b9c53~mv2.png/v1/f8e27845400b3faa.png',
+    photo: notreEquipe.oksana,
     nameFr: 'Oksana KONNOROVA',
     nameUk: 'Оксана КОННОРОВА',
     roleFr: "Pr\u00E9sidente de l\u2019association",
@@ -61,7 +60,7 @@ const TEAM_MEMBERS = [
   },
   {
     id: 'larissa',
-    photo: BASE + '946bd9_a6d94987f80846d2942b42e5820b2b57~mv2.png/v1/045e26337b4c2099.png',
+    photo: notreEquipe.larissa,
     nameFr: 'Larissa SERDECHNA',
     nameUk: 'Лариса СЕРДЕЧНА',
     roleFr: "Coordinatrice de la direction d'accompagnement des bless\u00E9s",
@@ -72,7 +71,7 @@ const TEAM_MEMBERS = [
   },
   {
     id: 'gertrude',
-    photo: BASE + '946bd9_72abd1a38c0141b090238b48e9969335~mv2.png/v1/abd2914a61df2e82.png',
+    photo: notreEquipe.gertrude,
     nameFr: 'Gertrude CHPATAKOVSKA',
     nameUk: 'Гертруда ШПАТАКОВСЬКА',
     roleFr: "Consultante scientifique de l'association",
@@ -83,7 +82,7 @@ const TEAM_MEMBERS = [
   },
   {
     id: 'sergei',
-    photo: BASE + '946bd9_604aedd41776485988ee620ee59dabc9~mv2.png/v1/d96d47df168ee724.png',
+    photo: notreEquipe.sergei,
     nameFr: 'Sergei OHLOBLYA',
     nameUk: 'Сергій ОГЛОБЛЯ',
     roleFr: "Directeur technique de l'association",
@@ -94,7 +93,7 @@ const TEAM_MEMBERS = [
   },
   {
     id: 'yana',
-    photo: BASE + '946bd9_f713f4817e8e4a708d7deb9d70a3e607~mv2.png/v1/5172af2a37452b6f.png',
+    photo: notreEquipe.yana,
     nameFr: 'Yana DUB',
     nameUk: 'Яна ДУБ',
     roleFr: "Sp\u00E9cialiste en communication pour Teplo",

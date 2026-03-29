@@ -1,28 +1,18 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext.jsx';
+import { home, actualites } from '../assets/paths.js';
 
-const BASE = '/.original-site/assets/static.wixstatic.com/media/';
-
-const CAROUSEL_IMAGES = [
-  BASE + '946bd9_faa7eca81baa4f95a1bd98d6cd95625f~mv2.jpg/v1/59b665f698ebaeb9.jpg',
-  BASE + '946bd9_87221d73574246a09e6fa246b4a50101~mv2.png/v1/6692d7ecf116b78c.webp',
-  BASE + '946bd9_912f0079af5b4028a3ca4c1540f1bd02~mv2.jpg/v1/217bdd430c8c5130.webp',
-  BASE + '946bd9_275710f046ca4385a9a8562b5e0529e1~mv2.jpg/v1/6dd14cea9bdf19df.webp',
-  BASE + '946bd9_54d20bc693dc475ab6099eae47838efc~mv2.jpg/v1/b64b49999b829bac.webp',
-  BASE + '946bd9_b3dab61619244e7ab06c899304e9bb7c~mv2.jpg/v1/96fe78feacdacf5e.webp',
-];
+const CAROUSEL_IMAGES = home.carousel;
 
 const BLOG_IMAGES = {
-  consortium: BASE + '946bd9_87221d73574246a09e6fa246b4a50101~mv2.png/v1/6692d7ecf116b78c.webp',
-  emdr: BASE + '946bd9_912f0079af5b4028a3ca4c1540f1bd02~mv2.jpg/v1/217bdd430c8c5130.webp',
-  colloque: BASE + '946bd9_275710f046ca4385a9a8562b5e0529e1~mv2.jpg/v1/6dd14cea9bdf19df.webp',
-  synergie: BASE + '946bd9_54d20bc693dc475ab6099eae47838efc~mv2.jpg/v1/b64b49999b829bac.webp',
-  assemblee: BASE + '946bd9_32723dadc62642d2a26111e6d3b112c4~mv2.png/v1/8f000445799db853.webp',
-  diviser: BASE + '946bd9_b3dab61619244e7ab06c899304e9bb7c~mv2.jpg/v1/96fe78feacdacf5e.webp',
+  consortium: actualites.consortium,
+  emdr: actualites.emdr,
+  colloque: actualites.colloque,
+  synergie: actualites.synergie,
+  assemblee: actualites.assemblee,
+  diviser: actualites.diviser,
 };
-
-const EVENT_IMG = BASE + '946bd9_faa7eca81baa4f95a1bd98d6cd95625f~mv2.jpg/v1/59b665f698ebaeb9.jpg';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -168,7 +158,7 @@ function EventSection({ t }) {
   return (
     <section
       className="relative py-20 px-4 bg-cover bg-center"
-      style={{ backgroundImage: `url(/.original-site/assets/static.wixstatic.com/media/11062b_952485dce28e4eac9e9f09d63fdc9ada~mv2.jpg/v1/c826a26ca4a4a582.jpg)` }}
+      style={{ backgroundImage: `url(${home.eventSectionBackground})` }}
     >
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative max-w-3xl mx-auto text-center text-white">
@@ -178,7 +168,7 @@ function EventSection({ t }) {
         <p className="text-base text-[#fae68a] italic font-extralight mb-6">{t.home.eventSubtitle}</p>
         <div className="bg-white/10 backdrop-blur p-6 max-w-xl mx-auto">
           <img
-            src={EVENT_IMG}
+            src={home.eventFeaturedImage}
             alt="Colloque"
             className="w-full mb-4 object-cover"
             style={{ maxHeight: '200px' }}

@@ -1,19 +1,18 @@
 import PageHeader from '../components/PageHeader.jsx';
 import { useLanguage } from '../context/LanguageContext.jsx';
-
-const BASE = '/.original-site/assets/static.wixstatic.com/media/';
+import { partenaires as partenairesAssets } from '../assets/paths.js';
 
 const FRENCH_PARTNERS = [
   {
     id: 'herault',
-    logo: BASE + '946bd9_463cd28f25ac4545ad8a62daf4e55000~mv2.webp/v1/14400629c8da81b1.webp',
+    logo: partenairesAssets.herault,
     nameFr: "Département de l'Hérault",
     nameUk: 'Департамент Еро',
     url: null,
   },
   {
     id: 'monts',
-    logo: BASE + '946bd9_f5c596785a76454ca00fef57ed5d951f~mv2.png/v1/b566b56cf2329ba5.png',
+    logo: partenairesAssets.monts,
     nameFr: 'Communauté de communes des Monts de Lacaune et de la Montagne du Haut Languedoc',
     nameUk: 'Громада муніципалітетів Монт-де-Лакон та Гірського Верхнього Лангедоку',
     url: null,
@@ -27,7 +26,7 @@ const FRENCH_PARTNERS = [
   },
   {
     id: 'emdr',
-    logo: BASE + '946bd9_dc8f8d84e98e409d8eecad3c74e53ce9~mv2.jpg/v1/8c904dfb637d4f72.jpg',
+    logo: partenairesAssets.emdr,
     nameFr: 'Association EMDR France',
     nameUk: 'Асоціація EMDR France',
     url: 'https://www.emdr-france.org',
@@ -41,28 +40,28 @@ const FRENCH_PARTNERS = [
   },
   {
     id: 'aufildesarts',
-    logo: BASE + '946bd9_9897ec565e424546ac46429dedf2ea08~mv2.png/v1/e9a8a23bf464bba9.png',
+    logo: partenairesAssets.aufildesarts,
     nameFr: 'Association Au fil des arts, Prémian',
     nameUk: 'Асоціація Au fil des arts, Преміан',
     url: null,
   },
   {
     id: 'lesapres',
-    logo: BASE + '946bd9_eb48cbc67cb84363829fe5351dbbb720~mv2.png/v1/796e0b383dfbaf10.png',
+    logo: partenairesAssets.lesapres,
     nameFr: 'Association Après, Bezins Garraux',
     nameUk: 'Асоціація Après, Безен Гаро',
     url: null,
   },
   {
     id: 'solidarite',
-    logo: BASE + '946bd9_72a67a59663d4a91b09c6783d885e298~mv2.png/v1/221f03a9cbcb52a2.png',
+    logo: partenairesAssets.solidarite,
     nameFr: 'Association Ukraine-Lyon Solidarité',
     nameUk: 'Асоціація Солідарність Ліон-Україна',
     url: null,
   },
   {
     id: 'passerelles',
-    logo: BASE + '946bd9_eece9d4aa4794801b5a04a379a42bc2a~mv2.png/v1/692d7b4fd2d6c4ff.png',
+    logo: partenairesAssets.passerelles,
     nameFr: 'Passerelles et Compétences, Montpellier',
     nameUk: 'Passerelles et Compétences, Монпельє',
     url: null,
@@ -111,21 +110,21 @@ const FOREIGN_PARTNERS = [
 const SPONSORS = [
   {
     id: 'danone',
-    logo: BASE + '946bd9_0502d482d7d44c8a9f1ebb3bc9a1bdfa~mv2.png/v1/1470f682d4992095.png',
+    logo: partenairesAssets.danone,
     nameFr: 'Danone Group',
     nameUk: 'Danone Group',
     url: 'https://www.danone.com',
   },
   {
     id: 'credit-agricole',
-    logo: BASE + '946bd9_a6b3f7d5c7c64a0c9f2069e4ae64503f~mv2.png/v1/247fdc921ec6b4ac.png',
+    logo: partenairesAssets['credit-agricole'],
     nameFr: 'Crédit Agricole, France',
     nameUk: 'Crédit Agricole, Франція',
     url: 'https://www.credit-agricole.fr',
   },
   {
     id: 'maped',
-    logo: BASE + '946bd9_966b75bb0b424b13ae6920ef1c2507bc~mv2.png/v1/a297923138cbd005.png',
+    logo: partenairesAssets.maped,
     nameFr: 'Maped France',
     nameUk: 'Maped France',
     url: 'https://www.maped.com',

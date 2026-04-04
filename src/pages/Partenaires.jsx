@@ -1,6 +1,6 @@
 import PageHeader from '../components/PageHeader.jsx';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { partenaires as partenairesAssets } from '../assets/paths.js';
+import { partenaires as partenairesAssets } from '../assets/paths/index.js';
 
 const FRENCH_PARTNERS = [
   {

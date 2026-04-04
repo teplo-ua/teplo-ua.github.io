@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext.jsx';
 import PageHeader from '../components/PageHeader.jsx';
-import { actualites } from '../assets/paths.js';
+import { actualites } from '../assets/paths/index.js';
 
 const BLOG_IMAGES = {
   consortium: actualites.consortium,

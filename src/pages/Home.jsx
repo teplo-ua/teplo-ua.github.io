@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { home, actualites } from '../assets/paths.js';
+import { home, actualites } from '../assets/paths/index.js';
 
 const CAROUSEL_IMAGES = home.carousel;
 
@@ -31,14 +31,22 @@ export default function Home() {
 
 function HeroCarousel() {
   const [current, setCurrent] = useState(0);
+  const slideCount = CAROUSEL_IMAGES.length;
 
-  const next = useCallback(() => setCurrent((c) => (c + 1) % CAROUSEL_IMAGES.length), []);
-  const prev = () => setCurrent((c) => (c - 1 + CAROUSEL_IMAGES.length) % CAROUSEL_IMAGES.length);
+  const next = useCallback(() => {
+    if (!slideCount) return;
+    setCurrent((c) => (c + 1) % slideCount);
+  }, [slideCount]);
+  const prev = () => {
+    if (!slideCount) return;
+    setCurrent((c) => (c - 1 + slideCount) % slideCount);
+  };
 
   useEffect(() => {
+    if (!slideCount) return undefined;
     const id = setInterval(next, 5000);
     return () => clearInterval(id);
-  }, [next]);
+  }, [next, slideCount]);
 
   return (
     <section className="relative overflow-hidden bg-neutral-900" style={{ height: '75vh', maxHeight: '680px' }}>
@@ -57,32 +65,39 @@ function HeroCarousel() {
         </div>
       ))}
 
-      <button
-        onClick={prev}
-        aria-label="Previous"
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-black/30 hover:bg-black/50 text-white rounded-full transition-colors"
-      >
-        ‹
-      </button>
-      <button
-        onClick={next}
-        aria-label="Next"
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-black/30 hover:bg-black/50 text-white rounded-full transition-colors"
-      >
-        ›
-      </button>
-
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2 z-10">
-        {CAROUSEL_IMAGES.map((_, i) => (
+      {slideCount > 0 && (
+        <>
           <button
-            key={i}
-            onClick={() => setCurrent(i)}
-            aria-label={`Slide ${i + 1}`}
-            className="w-2 h-2 rounded-full transition-colors"
-            style={{ background: i === current ? 'white' : 'rgba(255,255,255,0.45)' }}
-          />
-        ))}
-      </div>
+            type="button"
+            onClick={prev}
+            aria-label="Previous"
+            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-black/30 hover:bg-black/50 text-white rounded-full transition-colors"
+          >
+            ‹
+          </button>
+          <button
+            type="button"
+            onClick={next}
+            aria-label="Next"
+            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 w-10 h-10 flex items-center justify-center bg-black/30 hover:bg-black/50 text-white rounded-full transition-colors"
+          >
+            ›
+          </button>
+
+          <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+            {CAROUSEL_IMAGES.map((_, i) => (
+              <button
+                type="button"
+                key={i}
+                onClick={() => setCurrent(i)}
+                aria-label={`Slide ${i + 1}`}
+                className="w-2 h-2 rounded-full transition-colors"
+                style={{ background: i === current ? 'white' : 'rgba(255,255,255,0.45)' }}
+              />
+            ))}
+          </div>
+        </>
+      )}
     </section>
   );
 }

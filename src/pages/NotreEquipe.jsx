@@ -1,6 +1,6 @@
 import PageHeader from '../components/PageHeader.jsx';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { notreEquipe } from '../assets/paths.js';
+import { notreEquipe } from '../assets/paths/index.js';
 
 const TEAM_MEMBERS = [
   {

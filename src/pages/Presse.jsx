@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import PageHeader from '../components/PageHeader.jsx';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { presse as presseAssets } from '../assets/paths.js';
+import { presse as presseAssets } from '../assets/paths/index.js';
 
 const ARTICLE_IMAGES = {
   'ukraine-jeune': presseAssets['ukraine-jeune'],

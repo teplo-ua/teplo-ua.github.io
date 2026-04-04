@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { useLanguage } from '../context/LanguageContext.jsx';
-import { site } from '../assets/paths.js';
+import { site } from '../assets/paths/index.js';
 
 export default function Navbar() {
   const { language, setLanguage, t } = useLanguage();

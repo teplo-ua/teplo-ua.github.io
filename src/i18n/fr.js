@@ -142,10 +142,6 @@ const fr = {
     title: 'Projet actuel',
     projects: [
       {
-        title: "Plateforme d'Aide Psychoth\u00E9rapeutique \u00AB\u202FHelp To Help\u202F\u00BB",
-        text: "L'association Teplo travaille depuis 2022 dans le domaine de l'aide psychologique aux enfants touch\u00E9s par la guerre et \u00E0 leurs proches. Pendant les deux ann\u00E9es de la grande guerre, les membres praticiens de l'association et leurs coll\u00E8gues ont accumul\u00E9 une exp\u00E9rience consid\u00E9rable et, \u00E0 bien des \u00E9gards, unique en mati\u00E8re d'aide psychologique dans des conditions de besoin massif et \u00E0 long terme, y compris dans la zone de re-traumatisation constante et de s\u00E9jour dangereux.",
-      },
-      {
         title: "Jardins th\u00E9rapeutiques",
         text: "Les jardins th\u00E9rapeutiques sont une forme d'organisation de l'espace sous forme de paysage et de parc d\u00E9velopp\u00E9e dans le cadre du concept d'Evidence-Based Design In Healthcare. Ce concept existe depuis 40 ans, depuis 1984. Son initiateur, Roger Stephen Ulrich, travaillait alors \u00E0 l'Universit\u00E9 du Delaware. Depuis lors, il a \u00E9t\u00E9 scientifiquement prouv\u00E9 que le fait de se trouver dans certains paysages naturels a un effet positif sur la rapidit\u00E9 et la qualit\u00E9 du r\u00E9tablissement des patients souffrant de traumatismes psychophysiologiques.",
       },
@@ -158,6 +154,10 @@ const fr = {
   projetsPrevu: {
     title: 'Projets pr\u00E9vus',
     projects: [
+      {
+        title: "Plateforme d'Aide Psychoth\u00E9rapeutique \u00AB\u202FHelp To Help\u202F\u00BB",
+        text: "L'association Teplo travaille depuis 2022 dans le domaine de l'aide psychologique aux enfants touch\u00E9s par la guerre et \u00E0 leurs proches. Pendant les deux ann\u00E9es de la grande guerre, les membres praticiens de l'association et leurs coll\u00E8gues ont accumul\u00E9 une exp\u00E9rience consid\u00E9rable et, \u00E0 bien des \u00E9gards, unique en mati\u00E8re d'aide psychologique dans des conditions de besoin massif et \u00E0 long terme, y compris dans la zone de re-traumatisation constante et de s\u00E9jour dangereux.",
+      },
       {
         title: "Arboretums comm\u00E9moratifs europ\u00E9ens \u2013 2024",
         text: "Ayant d\u00E9marr\u00E9 comme un projet local, notre arboretum est con\u00E7u comme une grande cha\u00EEne europ\u00E9enne d'\u00E9v\u00E9nements similaires partout o\u00F9 se trouvent des r\u00E9fugi\u00E9s, tant d'Ukraine que d'autres r\u00E9gions en guerre. Les petites ruelles des villes et des r\u00E9gions d'Europe devraient devenir un r\u00E9seau social vivant unique de ceux qui ont perdu presque tout leur pass\u00E9, mais qui poss\u00E8dent tout notre avenir.",

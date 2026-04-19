@@ -42,6 +42,16 @@ import presseHeraultTribune from '../pages/presse/herault-tribune.png';
 import presseRadioSalvetat from '../pages/presse/radio-salvetat.jpg';
 import presseMidiLibre from '../pages/presse/midi-libre.jpg';
 
+import prRealisesResidence from '../pages/projets-realises/artres22anons.jpg';
+import prRealisesConference from '../pages/projets-realises/karim.jpg';
+
+import prActuelJardins from '../pages/projets-actuel/group-young-volunteers-park-they-are-plantin.jpg';
+import prActuelCommunaute from '../pages/projets-actuel/14568791609_f3ea8c95f4_z.jpg';
+
+import prPrevuHelp from '../pages/projets-prevu/iluha-zavaley-c3I2gi0pGzg-unsplash.jpg';
+import prPrevuArboretums from '../pages/projets-prevu/toa-heftiba-_UIVmIBB3JU-unsplash.jpg';
+import prPrevuApprentissage from '../pages/projets-prevu/photo_2022-08-29_10-05-52.jpg';
+
 const homeCarouselModules = import.meta.glob('../pages/home/carousel/*.{jpg,jpeg,png,webp}', {
   eager: true,
   import: 'default',
@@ -102,3 +112,12 @@ export const presse = {
   'radio-salvetat': presseRadioSalvetat,
   'midi-libre': presseMidiLibre,
 };
+
+/** Project section images — order matches `projetsRealises.projects` in i18n */
+export const projetsRealises = [prRealisesResidence, prRealisesConference];
+
+/** Order matches `projetsActuel.projects`: Jardins thérapeutiques, Communauté des Âpres */
+export const projetsActuel = [prActuelJardins, prActuelCommunaute];
+
+/** Order matches `projetsPrevu.projects`: Help To Help, Arboretums, Apprentissage */
+export const projetsPrevu = [prPrevuHelp, prPrevuArboretums, prPrevuApprentissage];
